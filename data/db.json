@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "title": "doing homework",
+      "body": "Creating new React app and add style to it with tailwind",
+      "interval": "Daily",
+      "id": 1
+    },
+    {
+      "title": "take a bath",
+      "body": "using special soap and skin care",
+      "interval": "Daily",
+      "id": 2
+    },
+    {
+      "title": "Go shoping",
+      "body": "by vegetables, milk, bred and fruits",
+      "interval": "Weekly",
+      "id": 3
+    }
+  ]
+}
