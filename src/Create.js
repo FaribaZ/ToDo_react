@@ -8,14 +8,14 @@ const Create = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const item = { title, body, interval };
-    setPending("true");
+    setPending(true);
     fetch("http://localhost:8000/items", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(item),
     }).then(() => {
       console.log("Item added");
-      setPending("false");
+      setPending(false);
     });
   };
   return (

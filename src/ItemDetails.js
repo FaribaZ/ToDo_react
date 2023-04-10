@@ -1,10 +1,18 @@
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 const ItemDetails = () => {
   const { id } = useParams();
   const { items, loading, error } = useFetch(
-    `http://localhost:8000/items${id}`
+    `http://localhost:8000/items/${id}`
   );
+  const history = useHistory();
+  const handleClick = () => {
+    fetch(`http://localhost:8000/items/${id}`, {
+      method: "DELETE",
+    }).then(() => {
+      history.push("/");
+    });
+  };
   return (
     <div className="detailes">
       {loading && <div> Is loading...</div>}
@@ -16,6 +24,7 @@ const ItemDetails = () => {
           <p>{items.body}</p>
         </article>
       )}
+      <button onClick={handleClick}>Delete</button>
     </div>
   );
 };
