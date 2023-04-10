@@ -4,10 +4,10 @@ import useFetch from "./useFetch";
 
 const Home = () => {
   const { items, loading, error } = useFetch("http://localhost:8000/items");
-  //   const handleDelet = (id) => {
-  //     const newItems = items.filter((item) => item.id !== id);
-  //     setItem(newItems);
-  //   };
+  // const handleDelet = (id) => {
+  //   const newItems = items.filter((item) => item.id !== id);
+  //   setItem(newItems);
+  // };
 
   return (
     <div className="home">
